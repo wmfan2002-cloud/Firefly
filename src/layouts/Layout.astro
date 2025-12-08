@@ -477,6 +477,17 @@ const bannerOffset = `${BANNER_HEIGHT_EXTEND / 2}vh`;
 >
   @tailwind components;
   @layer components {
+    .enable-banner #main-grid {
+      /* 仅在正文区域铺背景，避免与顶部横幅重叠裁切 */
+      background: #0b0b0b url("/assets/images/fcsdt-3.png") center 60%/cover fixed no-repeat;
+    }
+
+    @media (max-width: 768px) {
+      .enable-banner #main-grid {
+        background: #0b0b0b url("/assets/images/fcsdt-3.png") center 45%/cover scroll no-repeat;
+      }
+    }
+
     .enable-banner.is-home #banner-wrapper {
       @apply h-[var(--banner-height-home)] translate-y-[var(--banner-height-extend)];
     }

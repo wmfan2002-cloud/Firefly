@@ -2,18 +2,14 @@ import type { ProfileConfig } from "../types/config";
 
 export const profileConfig: ProfileConfig = {
 	avatar: "/assets/images/avatar.webp",
-	name: "Firefly",
-	bio: "Hello, I'm Firefly.",
+	name: "FCS & DT",
+	bio: "樊春松 & 董彤 的旅行足迹 ✈️",
 	links: [
-		{
-			name: "Bilibli",
-			icon: "fa6-brands:bilibili",
-			url: "https://space.bilibili.com/38932988",
-		},
-		{
-			name: "GitHub",
-			icon: "fa6-brands:github",
-			url: "https://github.com/CuteLeaf",
-		},
+		// 暂时关闭社交链接，需要时取消注释
+		// {
+		// 	name: "GitHub",
+		// 	icon: "fa6-brands:github",
+		// 	url: "https://github.com/wmfan2002-cloud",
+		// },
 	],
 };

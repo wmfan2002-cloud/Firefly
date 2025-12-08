@@ -1,37 +1,31 @@
-# 关于我 / About Me
+# 关于我们 / About Us
 
-你好！我是 **夏叶** ，一个在数字世界中默默无闻的一片叶子。
+你好！我们是 **樊春松（FCS）** 和 **董彤（DT）** 👫
 
-## 🛠️ 关于本站
+这里是我们的旅行日记，记录着两个人一起走过的每一段旅程。
 
-这个网站使用 **Astro** 框架构建，采用了 [Firefly](https://github.com/CuteLeaf/Firefly) 模板，Firefly 是基于 [Fuwari](https://github.com/saicaca/fuwari) 的二次开发。
+## ✈️ 关于这个博客
 
-**Firefly** 是一款基于 Astro 框架和 Fuwari 模板开发的清新美观且现代化个人博客主题模板，专为技术爱好者和内容创作者设计。该主题融合了现代 Web 技术栈，提供了丰富的功能模块和高度可定制的界面，让您能够轻松打造出专业且美观的个人博客网站。
+我们相信，最美的风景不在目的地，而在与爱人同行的路上。
 
+这个博客记录了我们一起：
+- 🏔️ 探索过的山川湖海
+- 🏙️ 漫步过的城市街巷
+- 🍜 品尝过的各地美食
+- 📸 定格下的美好瞬间
 
-**🖥️在线预览： [Firefly - Demo site](https://firefly.cuteleaf.cn/)**
+每一篇游记，都是我们爱情旅程中的珍贵回忆。
 
-**🏠我的博客： [https://blog.cuteleaf.cn](https://blog.cuteleaf.cn/)**
+## 🌍 我们去过的地方
 
-**📝Firefly使用文档： [https://docs-firefly.cuteleaf.cn](https://docs-firefly.cuteleaf.cn/)**
+*（持续更新中...）*
 
-**⭐Firefly开源地址：[https://github.com/CuteLeaf/Firefly](https://github.com/CuteLeaf/Firefly)** 
+## 💕 我们的故事
 
-**⭐Fuwari开源地址：[https://github.com/saicaca/fuwari](https://github.com/saicaca/fuwari)**
+两个人，一段路，无数风景。
 
-::github{repo="CuteLeaf/Firefly"}
-
-::github{repo="saicaca/fuwari"}
-
-
-## 📫 联系方式
-
-如果你想和我交流技术问题，分享有趣的想法，或者只是想打个招呼，欢迎通过以下方式联系我：
-
-- 💻 **GitHub**: [CuteLeaf](https://github.com/CuteLeaf)
-- ✉️ **Email**: [xiaye@msn.com](mailto:xiaye@msn.com)
+感谢你来到这里，希望我们的旅行故事能给你带来一些灵感和快乐！
 
 ---
 
-*感谢你的来访！希望在这里能找到对你有用的内容！*
-
+*如果你也热爱旅行，欢迎在留言板和我们交流~ 💬*

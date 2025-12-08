@@ -15,7 +15,7 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 	];
 
 	// 支持自定义导航栏链接,并且支持多级菜单
-	links.push({
+	/*links.push({
 		name: "链接",
 		url: "/links/",
 		icon: "material-symbols:link",
@@ -33,9 +33,9 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 				icon: "fa6-brands:bilibili",
 			},
 		],
-	});
+	});*/
 
-	links.push(LinkPreset.Friends);
+	//links.push(LinkPreset.Friends);
 
 	// 根据配置决定是否添加留言板页面
 	if (siteConfig.pages.guestbook) {
