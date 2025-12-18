@@ -1,4 +1,5 @@
 ---
+import BackToPrev from "@components/common/controls/BackToPrev.astro";
 import BackToTop from "@components/common/controls/BackToTop.astro";
 import Footer from "@components/layout/Footer.astro";
 import LeftSideBar from "@components/layout/LeftSideBar.astro";
@@ -388,6 +389,7 @@ const transparentClass = shouldEnableTransparency
             </div>
         </div>
 
+        {postSlug && <BackToPrev />}
         <BackToTop></BackToTop>
         <SpineModel></SpineModel>
         {live2dModelConfig.enable && <Live2DWidget config={live2dModelConfig} />}

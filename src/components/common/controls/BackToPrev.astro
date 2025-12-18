@@ -1,0 +1,128 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<div class="back-to-prev-wrapper">
+  <div
+    id="back-to-prev-btn"
+    class="back-to-prev-btn flex items-center rounded-2xl overflow-hidden transition"
+    onclick="backToPrev()"
+  >
+    <button
+      aria-label="Back to Previous Page"
+      class="h-[3.75rem] w-[3.75rem] rounded-2xl"
+    >
+      <Icon name="material-symbols:arrow-back-rounded" class="mx-auto" />
+    </button>
+  </div>
+</div>
+
+<style lang="stylus">
+.back-to-prev-wrapper
+    width: 3.75rem
+    height: 3.75rem
+    position: absolute
+    right: 0
+    top: 0
+    pointer-events: none
+    overflow: visible
+    z-index: 999
+
+.back-to-prev-btn
+    color: var(--primary)
+    font-size: 2.25rem
+    font-weight: bold
+    position: fixed
+    bottom: 17.75rem
+    right: 2rem
+    cursor: pointer
+    pointer-events: auto
+    z-index: 1000
+    transition: all 0.3s ease
+    border-radius: 1rem
+    backdrop-filter: blur(12px)
+    background-color: var(--card-bg)
+    border: 1px solid rgba(0, 0, 0, 0.1)
+    &:active
+        transform: scale(0.9)
+    &:hover
+        transform: scale(1.05)
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15)
+        background-color: rgba(255, 255, 255, 0.95)
+        border-color: rgba(0, 0, 0, 0.2)
+
+:global(.dark) .back-to-prev-btn
+    background-color: var(--card-bg)
+    border: 1px solid rgba(255, 255, 255, 0.15)
+    color: var(--primary, #60a5fa)
+    &:hover
+        background-color: var(--card-bg)
+        border-color: rgba(255, 255, 255, 0.3)
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3)
+
+/* 响应式调整 */
+@media (max-width: 1024px)
+    .back-to-prev-btn
+        right: 1rem
+        bottom: 14.75rem
+
+@media (max-width: 768px)
+    .back-to-prev-btn
+        right: 0.75rem
+        bottom: 11.5rem
+        width: 3rem
+        height: 3rem
+        font-size: 1.5rem
+        border-radius: 0.75rem
+
+@media (max-width: 480px)
+    .back-to-prev-btn
+        right: 0.5rem
+        bottom: 10.5rem
+        width: 2.5rem
+        height: 2.5rem
+        font-size: 1.25rem
+        border-radius: 0.5rem
+
+@media (max-width: 360px)
+    .back-to-prev-btn
+        right: 0.25rem
+        bottom: 8rem
+        width: 2rem
+        height: 2rem
+        font-size: 1rem
+        border-radius: 0.375rem
+
+@media (max-width: 320px)
+    .back-to-prev-btn
+        right: 0.125rem
+        bottom: 7rem
+        width: 1.75rem
+        height: 1.75rem
+        font-size: 0.875rem
+        border-radius: 0.25rem
+
+/* 横屏模式适配 */
+@media (orientation: landscape) and (max-height: 500px)
+    .back-to-prev-btn
+        bottom: 17.75rem
+        right: 0.5rem
+
+/* 确保按钮始终在可视区域内 */
+.back-to-prev-btn
+    min-width: 1.75rem
+    min-height: 1.75rem
+    padding: 0.25rem
+    max-width: 4rem
+    max-height: 4rem
+</style>
+
+<script is:inline>
+  function backToPrev() {
+    if (window.history.length > 1) {
+      window.history.back();
+    } else {
+      window.location.href = '/';
+    }
+  }
+</script>

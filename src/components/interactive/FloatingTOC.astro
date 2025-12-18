@@ -184,7 +184,7 @@ const isSidebarTocEnabled = sidebarTocComponent?.enable ?? false;
 		height: 3rem
 		font-size: 1.5rem
 		border-radius: 0.75rem
-		
+
 	.floating-toc-panel
 		right: 0.75rem !important
 		bottom: calc(8rem + 4rem) !important
@@ -192,6 +192,53 @@ const isSidebarTocEnabled = sidebarTocComponent?.enable ?? false;
 		max-width: 20rem
 		max-height: 28rem
 
+@media (max-width: 480px)
+	.floating-toc-btn
+		right: 0.5rem
+		bottom: 7.5rem
+		width: 2.5rem
+		height: 2.5rem
+		font-size: 1.25rem
+		border-radius: 0.5rem
+
+	.floating-toc-panel
+		right: 0.5rem !important
+		bottom: calc(7.5rem + 3.5rem) !important
+		width: calc(100vw - 1rem)
+		max-width: 18rem
+		max-height: 24rem
+
+@media (max-width: 360px)
+	.floating-toc-btn
+		right: 0.25rem
+		bottom: 5.5rem
+		width: 2rem
+		height: 2rem
+		font-size: 1rem
+		border-radius: 0.375rem
+
+	.floating-toc-panel
+		right: 0.25rem !important
+		bottom: calc(5.5rem + 3rem) !important
+		width: calc(100vw - 0.5rem)
+		max-width: 16rem
+		max-height: 20rem
+
+@media (max-width: 320px)
+	.floating-toc-btn
+		right: 0.125rem
+		bottom: 4.75rem
+		width: 1.75rem
+		height: 1.75rem
+		font-size: 0.875rem
+		border-radius: 0.25rem
+
+	.floating-toc-panel
+		right: 0.125rem !important
+		bottom: calc(4.75rem + 2.5rem) !important
+		width: calc(100vw - 0.25rem)
+		max-width: 14rem
+		max-height: 16rem
 
 /* 高缩放比例适配 */
 @media (min-resolution: 2dppx)
