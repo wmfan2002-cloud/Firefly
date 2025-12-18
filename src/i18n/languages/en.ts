@@ -211,7 +211,8 @@ export const en: Translation = {
 
 	// Knowledge Graph
 	[Key.knowledgeGraph]: "Knowledge Graph",
-	[Key.knowledgeGraphDescription]: "Explore connections between posts, tags and categories",
+	[Key.knowledgeGraphDescription]:
+		"Explore connections between posts, tags and categories",
 	[Key.knowledgeGraphPost]: "Post",
 	[Key.knowledgeGraphTag]: "Tag",
 	[Key.knowledgeGraphCategory]: "Category",

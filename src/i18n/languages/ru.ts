@@ -213,7 +213,8 @@ export const ru: Translation = {
 
 	// Граф знаний
 	[Key.knowledgeGraph]: "Граф знаний",
-	[Key.knowledgeGraphDescription]: "Исследуйте связи между статьями, тегами и категориями",
+	[Key.knowledgeGraphDescription]:
+		"Исследуйте связи между статьями, тегами и категориями",
 	[Key.knowledgeGraphPost]: "Статья",
 	[Key.knowledgeGraphTag]: "Тег",
 	[Key.knowledgeGraphCategory]: "Категория",

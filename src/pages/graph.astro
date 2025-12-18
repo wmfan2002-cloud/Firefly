@@ -1,16 +1,16 @@
 ---
-import MainGridLayout from "../layouts/MainGridLayout.astro";
 import KnowledgeGraph from "../components/graph/KnowledgeGraph.svelte";
-import {
-	getSortedPosts,
-	getTagList,
-	getCategoryList,
-} from "../utils/content-utils";
-import { getPostUrlBySlug, getTagUrl } from "../utils/url-utils";
 import I18nKey from "../i18n/i18nKey";
 import { i18n } from "../i18n/translation";
-import type { GraphNode, GraphLink } from "../types/graph";
+import MainGridLayout from "../layouts/MainGridLayout.astro";
+import type { GraphLink, GraphNode } from "../types/graph";
 import { GRAPH_COLORS } from "../types/graph";
+import {
+	getCategoryList,
+	getSortedPosts,
+	getTagList,
+} from "../utils/content-utils";
+import { getPostUrlBySlug, getTagUrl } from "../utils/url-utils";
 
 const posts = await getSortedPosts();
 const tags = await getTagList();

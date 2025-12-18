@@ -1,16 +1,15 @@
 ---
-import WidgetLayout from "./WidgetLayout.astro";
-import KnowledgeGraph from "../graph/KnowledgeGraph.svelte";
-import {
-	getSortedPosts,
-	getTagList,
-	getCategoryList,
-} from "@/utils/content-utils";
-import { getPostUrlBySlug, getTagUrl } from "@/utils/url-utils";
 import I18nKey from "@/i18n/i18nKey";
 import { i18n } from "@/i18n/translation";
-import { url } from "@/utils/url-utils";
-import type { GraphNode, GraphLink } from "@/types/graph";
+import type { GraphLink, GraphNode } from "@/types/graph";
+import {
+	getCategoryList,
+	getSortedPosts,
+	getTagList,
+} from "@/utils/content-utils";
+import { getPostUrlBySlug, getTagUrl, url } from "@/utils/url-utils";
+import KnowledgeGraph from "../graph/KnowledgeGraph.svelte";
+import WidgetLayout from "./WidgetLayout.astro";
 
 interface Props {
 	class?: string;
