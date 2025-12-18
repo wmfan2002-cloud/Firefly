@@ -195,6 +195,14 @@ enum I18nKey {
 	calendarOctober = "calendarOctober",
 	calendarNovember = "calendarNovember",
 	calendarDecember = "calendarDecember",
+
+	// 知识图谱
+	knowledgeGraph = "knowledgeGraph",
+	knowledgeGraphDescription = "knowledgeGraphDescription",
+	knowledgeGraphPost = "knowledgeGraphPost",
+	knowledgeGraphTag = "knowledgeGraphTag",
+	knowledgeGraphCategory = "knowledgeGraphCategory",
+	knowledgeGraphViewFull = "knowledgeGraphViewFull",
 }
 
 export default I18nKey;

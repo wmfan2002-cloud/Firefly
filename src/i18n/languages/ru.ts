@@ -210,4 +210,12 @@ export const ru: Translation = {
 	[Key.calendarOctober]: "Окт",
 	[Key.calendarNovember]: "Ноя",
 	[Key.calendarDecember]: "Дек",
+
+	// Граф знаний
+	[Key.knowledgeGraph]: "Граф знаний",
+	[Key.knowledgeGraphDescription]: "Исследуйте связи между статьями, тегами и категориями",
+	[Key.knowledgeGraphPost]: "Статья",
+	[Key.knowledgeGraphTag]: "Тег",
+	[Key.knowledgeGraphCategory]: "Категория",
+	[Key.knowledgeGraphViewFull]: "Смотреть полный граф",
 };

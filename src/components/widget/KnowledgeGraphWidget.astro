@@ -1,0 +1,88 @@
+---
+import WidgetLayout from "./WidgetLayout.astro";
+import KnowledgeGraph from "../graph/KnowledgeGraph.svelte";
+import {
+	getSortedPosts,
+	getTagList,
+	getCategoryList,
+} from "@/utils/content-utils";
+import { getPostUrlBySlug, getTagUrl } from "@/utils/url-utils";
+import I18nKey from "@/i18n/i18nKey";
+import { i18n } from "@/i18n/translation";
+import { url } from "@/utils/url-utils";
+import type { GraphNode, GraphLink } from "@/types/graph";
+
+interface Props {
+	class?: string;
+	style?: string;
+}
+const { class: className, style } = Astro.props;
+
+const posts = await getSortedPosts();
+const tags = await getTagList();
+const categories = await getCategoryList();
+
+const nodes: GraphNode[] = [];
+const links: GraphLink[] = [];
+
+categories.forEach((cat) => {
+	nodes.push({
+		id: `cat-${cat.name}`,
+		group: 3,
+		name: cat.name,
+		val: Math.min(cat.count * 2 + 4, 14),
+		url: cat.url,
+	});
+});
+
+const topTags = tags.sort((a, b) => b.count - a.count).slice(0, 12);
+topTags.forEach((tag) => {
+	nodes.push({
+		id: `tag-${tag.name}`,
+		group: 2,
+		name: tag.name,
+		val: Math.min(tag.count + 3, 10),
+		url: getTagUrl(tag.name),
+	});
+});
+
+posts.slice(0, 8).forEach((post) => {
+	nodes.push({
+		id: post.id,
+		group: 1,
+		name: post.data.title,
+		val: 6,
+		url: getPostUrlBySlug(post.id),
+	});
+
+	if (post.data.category) {
+		const catName =
+			typeof post.data.category === "string"
+				? post.data.category
+				: String(post.data.category);
+		if (nodes.find((n) => n.id === `cat-${catName}`)) {
+			links.push({ source: post.id, target: `cat-${catName}`, value: 2 });
+		}
+	}
+
+	if (post.data.tags) {
+		post.data.tags.forEach((tagName) => {
+			if (nodes.find((n) => n.id === `tag-${tagName}`)) {
+				links.push({ source: post.id, target: `tag-${tagName}`, value: 1 });
+			}
+		});
+	}
+});
+---
+
+<WidgetLayout name={i18n(I18nKey.knowledgeGraph)} id="knowledge-graph" class={className} style={style}>
+    <div class="w-full">
+        <KnowledgeGraph client:visible nodes={nodes} links={links} isWidget={true} />
+        <a
+            href={url("/graph/")}
+            class="mt-2 block text-center text-sm text-[var(--primary)] hover:underline transition-colors"
+        >
+            {i18n(I18nKey.knowledgeGraphViewFull)} →
+        </a>
+    </div>
+</WidgetLayout>

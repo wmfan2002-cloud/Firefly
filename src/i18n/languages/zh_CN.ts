@@ -200,4 +200,12 @@ export const zh_CN: Translation = {
 	[Key.calendarOctober]: "10月",
 	[Key.calendarNovember]: "11月",
 	[Key.calendarDecember]: "12月",
+
+	// 知识图谱
+	[Key.knowledgeGraph]: "知识图谱",
+	[Key.knowledgeGraphDescription]: "探索文章、标签与分类之间的关联",
+	[Key.knowledgeGraphPost]: "文章",
+	[Key.knowledgeGraphTag]: "标签",
+	[Key.knowledgeGraphCategory]: "分类",
+	[Key.knowledgeGraphViewFull]: "查看完整图谱",
 };

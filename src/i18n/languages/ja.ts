@@ -207,4 +207,12 @@ export const ja: Translation = {
 	[Key.calendarOctober]: "10月",
 	[Key.calendarNovember]: "11月",
 	[Key.calendarDecember]: "12月",
+
+	// ナレッジグラフ
+	[Key.knowledgeGraph]: "ナレッジグラフ",
+	[Key.knowledgeGraphDescription]: "記事、タグ、カテゴリー間の関係を探索",
+	[Key.knowledgeGraphPost]: "記事",
+	[Key.knowledgeGraphTag]: "タグ",
+	[Key.knowledgeGraphCategory]: "カテゴリー",
+	[Key.knowledgeGraphViewFull]: "完全なグラフを見る",
 };

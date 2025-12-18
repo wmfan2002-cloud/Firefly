@@ -82,6 +82,7 @@ export enum LinkPreset {
 	Sponsor = 4,
 	Guestbook = 5,
 	Bangumi = 6,
+	Graph = 7,
 }
 
 export type NavBarLink = {
@@ -317,6 +318,7 @@ export type WidgetComponentType =
 	| "advertisement"
 	| "stats"
 	| "calendar"
+	| "graph"
 	| "custom";
 
 export type WidgetComponentConfig = {

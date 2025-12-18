@@ -38,4 +38,9 @@ export const LinkPresets: { [key in LinkPreset]: NavBarLink } = {
 		url: "/bangumi/",
 		icon: "material-symbols:movie",
 	},
+	[LinkPreset.Graph]: {
+		name: i18n(I18nKey.knowledgeGraph),
+		url: "/graph/",
+		icon: "material-symbols:hub",
+	},
 };
