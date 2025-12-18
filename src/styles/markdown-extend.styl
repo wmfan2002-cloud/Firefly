@@ -329,3 +329,36 @@ a.card-github.fetch-error
 
   .mermaid svg
     max-height: 400px
+
+// 旅行图片画廊样式
+.travel-gallery
+  columns: 3
+  column-gap: 1rem
+  margin: 1.5rem 0
+
+  @media (max-width: 1024px)
+    columns: 2
+
+  @media (max-width: 640px)
+    columns: 1
+
+  .gallery-item
+    display: block
+    break-inside: avoid
+    margin-bottom: 1rem
+    border-radius: 0.75rem
+    overflow: hidden
+    cursor: pointer
+    transition: transform 0.3s ease, opacity 0.3s ease
+    will-change: transform
+
+    &:hover
+      transform: translateY(-4px) scale(1.02)
+      opacity: 0.95
+
+    img
+      width: 100%
+      height: auto
+      display: block
+      border-radius: 0.75rem
+      background-color: var(--card-bg)
